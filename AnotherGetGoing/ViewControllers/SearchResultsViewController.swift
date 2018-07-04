@@ -14,6 +14,7 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
+    
 
     @IBOutlet weak var sortSegmentControl: UISegmentedControl!
     
@@ -47,6 +48,13 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         if let imageUrl  = places[indexPath.row].iconUrl, let url = URL(string: imageUrl),
             let dataContents = try? Data(contentsOf: url), let imageSrc = UIImage(data: dataContents){
             cell.iconImageView.image = imageSrc
+        }
+        
+        if let rating = places[indexPath.row].rating{
+            cell.ratingControl.rating = Int(rating.rounded(.toNearestOrAwayFromZero))
+        }
+        else{
+            cell.ratingControl.isHidden = true
         }
     
         return cell

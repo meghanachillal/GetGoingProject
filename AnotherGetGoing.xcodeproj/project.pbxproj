@@ -23,6 +23,7 @@
 		5DDDD62A20D86B6600743A3C /* PlaceOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDD62920D86B6600743A3C /* PlaceOfInterest.swift */; };
 		5DDDD62C20D86E4100743A3C /* APIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDDD62B20D86E4100743A3C /* APIParser.swift */; };
 		5DED841320D1BEB4003F5464 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DED841220D1BEB4003F5464 /* SearchViewController.swift */; };
+		6202BA9420ED69B20081F3F7 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6202BA9320ED69B20081F3F7 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		5DDDD62920D86B6600743A3C /* PlaceOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceOfInterest.swift; sourceTree = "<group>"; };
 		5DDDD62B20D86E4100743A3C /* APIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIParser.swift; sourceTree = "<group>"; };
 		5DED841220D1BEB4003F5464 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		6202BA9320ED69B20081F3F7 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 			children = (
 				5DBDD31C20DAF3C2006CE91E /* POITableViewCell.swift */,
 				5DBDD31D20DAF3C2006CE91E /* POITableViewCell.xib */,
+				6202BA9320ED69B20081F3F7 /* RatingControl.swift */,
 			);
 			path = "Custom UI Controls";
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				5DDDD62A20D86B6600743A3C /* PlaceOfInterest.swift in Sources */,
 				5DBDD31E20DAF3C2006CE91E /* POITableViewCell.swift in Sources */,
 				5DDDD62820D8638E00743A3C /* GooglePlacesAPI.swift in Sources */,
+				6202BA9420ED69B20081F3F7 /* RatingControl.swift in Sources */,
 				5DD5ACAE20E4310400025AA8 /* FiltersViewController.swift in Sources */,
 				5DBDD32120DB0A7E006CE91E /* DetailsViewController.swift in Sources */,
 			);

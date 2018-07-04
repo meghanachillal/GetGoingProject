@@ -16,8 +16,8 @@ class PlaceOfInterest: NSObject, NSCoding {
         static let idKey = "id"
         static let nameKey = "name"
         static let ratingKey = "rating"
-//        static let latKey = "lat"
-//        static let lngKey = "lng"
+        static let latKey = "lat"
+    static let lngKey = "lng"
 //        static let formattedAddressKey = "formattedAddress"
     }
     

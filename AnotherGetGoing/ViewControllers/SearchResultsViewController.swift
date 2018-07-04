@@ -60,6 +60,21 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     
+    @IBAction func sortOnSelectionChange(_ sender: UISegmentedControl) {
+        let segemtedIndex = sortSegmentControl.selectedSegmentIndex
+        if segemtedIndex == 0{
+            places = places.sorted(by: {
+                $0.name > $1.name
+            })
+        }
+        else {
+            places = places.sorted(by: {
+                Double($0.rating!) > Double($1.rating!)
+            })
+        }
+        tableView.reloadData()
+    }
+    
     /*
     // MARK: - Navigation
 

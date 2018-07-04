@@ -14,6 +14,9 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     
     @IBOutlet weak var tableView: UITableView!
     
+
+    @IBOutlet weak var sortSegmentControl: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -50,13 +53,13 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
         let detailsViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsViewController") as! DetailsViewController
         detailsViewController.place = places[indexPath.row]
         navigationController?.pushViewController(detailsViewController, animated: true)
     }
     
     
-
     /*
     // MARK: - Navigation
 

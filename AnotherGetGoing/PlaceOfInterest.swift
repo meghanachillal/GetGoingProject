@@ -15,7 +15,7 @@ class PlaceOfInterest: NSObject, NSCoding {
     struct PropertyKey {
         static let idKey = "id"
         static let nameKey = "name"
-//        static let ratingKey = "rating"
+        static let ratingKey = "rating"
 //        static let latKey = "lat"
 //        static let lngKey = "lng"
 //        static let formattedAddressKey = "formattedAddress"
@@ -27,6 +27,9 @@ class PlaceOfInterest: NSObject, NSCoding {
     var location: CLLocation?
     var formattedAddress: String?
     var iconUrl: String?
+    var placeId : String?
+    var website : String?
+    var formattedPhoneNumber : String?
     
     init?(json: [String: Any]){
         
@@ -42,6 +45,9 @@ class PlaceOfInterest: NSObject, NSCoding {
         self.rating = json["rating"] as? Double
         self.formattedAddress = json["formatted_address"] as? String
         self.iconUrl = json["icon"] as? String
+        self.placeId = json["place_id"] as? String
+        self.formattedPhoneNumber = json["formatted_phone_number"] as? String
+        self.website = json["website"] as? String
         
         if let geometry = json["geometry"] as? [String: Any] {
             if let locationCoordinate = geometry["location"] as? [String: Double

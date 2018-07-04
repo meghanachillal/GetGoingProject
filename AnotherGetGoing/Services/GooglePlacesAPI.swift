@@ -35,6 +35,29 @@ class GooglePlacesAPI {
         
     }
     
+    class func placeDetails(placeId: String, completionHandler: @escaping(_ statusCode: Int, _ json: [String: Any]?) -> Void){
+        var urlComponents = URLComponents()
+        urlComponents.scheme = Constants.scheme
+        urlComponents.host = Constants.host
+        urlComponents.path = Constants.placeDetails
+        
+        urlComponents.queryItems = [
+            URLQueryItem(name: "place_id", value: placeId),
+            URLQueryItem(name: "key", value: Constants.apiKey)
+        ]
+        
+        NetworkingLayer.getRequest(with: urlComponents) { (statusCode, data) in
+            if let jsonData = data,
+                let jsonObject = try? JSONSerialization.jsonObject(with: jsonData, options: .allowFragments) as? [String: Any] {
+                print(jsonObject ?? "")
+                completionHandler(statusCode, jsonObject)
+            } else {
+                print("life is not easy")
+                completionHandler(statusCode, nil)
+            }
+        }
+        
+    }
     
     class func nearbySearch(for locationCoordinate: CLLocationCoordinate2D, radius: Int = 5000, keyword: String?, completionHandler: @escaping(_ statusCode: Int, _ json: [String: Any]?) -> Void){
         var urlComponents = URLComponents()

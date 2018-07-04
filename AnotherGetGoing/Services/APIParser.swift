@@ -20,4 +20,12 @@ class APIParser {
         }
         return places
     }
+    
+    class func parsePlaceDetailsAPIResponse(json: [String: Any]) -> PlaceOfInterest{
+        var places: PlaceOfInterest!
+        if let results = json["result"] as? [String: Any] {
+                places = PlaceOfInterest(json: results)
+            }
+        return places
+    }
 }

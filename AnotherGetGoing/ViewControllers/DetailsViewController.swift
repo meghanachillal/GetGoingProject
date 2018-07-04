@@ -16,11 +16,23 @@ class DetailsViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var phoneNumberLabel: UILabel!
+    @IBOutlet weak var websiteLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        addressLabel.text = place.formattedAddress
+          addressLabel.text = place.formattedAddress
+            GooglePlacesAPI.placeDetails(placeId: place.placeId!, completionHandler: {(status, json) in
+                if let jsonObj = json{
+                    let placeDetails = APIParser.parsePlaceDetailsAPIResponse(json: jsonObj)
+                    DispatchQueue.main.async {
+                        self.phoneNumberLabel.text = placeDetails.formattedPhoneNumber
+                        self.websiteLabel.text = placeDetails.website 
+                        
+                         
+                    }
+                }
+            })
         
         setMapViewCoordinate()
     }

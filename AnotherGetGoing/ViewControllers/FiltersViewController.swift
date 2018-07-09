@@ -70,6 +70,10 @@ class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     
     
+    @IBAction func resetFilterAction(_ sender: UIButton) {
+        delegate?.resetSelectedFilters()
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func applyButtonAction(_ sender: Any) {
         delegate?.getFilterInfo(rankBy: rankSelected, radius: radius, openNow: isOpen)
         delegate?.applySelectedFilters()

@@ -19,7 +19,9 @@ enum RankBy {
         }
     }
 }
-
+protocol FilterDelegate {
+    func getFilterInfo(rankBy: RankBy,radius: String, openNow: Bool)
+}
 class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
  
 
@@ -31,6 +33,11 @@ class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     var rankByDictionary: [RankBy] = [.prominence , .distance]
     var rankSelected: RankBy = .prominence
+    var radius = "25000"
+    var isOpen = false
+   
+    
+    var delegate: FilterDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,12 +67,18 @@ class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func applyButtonAction(_ sender: Any) {
+        delegate?.getFilterInfo(rankBy: rankSelected, radius: radius, openNow: isOpen)
+        dismiss(animated: true, completion: nil)
+    }
     @IBAction func openNowSelectionChange(_ sender: UISwitch) {
         print("switch is \(sender.isOn)")
+        isOpen = sender.isOn
     }
     
     @IBAction func radiusChanged(_ sender: UISlider) {
         print("radius is \(sender.value)")
+        radius = "\(Int(sender.value))"
     }
     
     /*

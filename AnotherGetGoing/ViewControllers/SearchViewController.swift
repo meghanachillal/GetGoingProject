@@ -15,6 +15,9 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchParameterTextField: UITextField!
     
+    @IBOutlet weak var filterOptions: UIButton!
+    
+    
     var rankSelected: RankBy = .prominence
     var radius = "25000"
     var isOpen = false
@@ -196,10 +199,19 @@ extension SearchViewController: LocationServiceDelegate {
     }
 }
 extension SearchViewController: FilterDelegate {
+    func resetSelectedFilters() {
+        filterOptions.setImage(UIImage(named: "filtersDefault"), for: [])
+    }
+    
     func getFilterInfo(rankBy: RankBy, radius: String, openNow: Bool) {
         rankSelected = rankBy
         self.radius = radius
         self.isOpen = openNow
     }
+    
+    func applySelectedFilters() {
+        filterOptions.setImage(UIImage(named: "filters"), for: [])
+    }
+    
 }
 

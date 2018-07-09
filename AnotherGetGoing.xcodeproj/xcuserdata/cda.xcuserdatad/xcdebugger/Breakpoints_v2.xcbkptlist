@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnotherGetGoing/ViewControllers/SearchViewController.swift"
-            timestampString = "552855506.007979"
+            timestampString = "552857652.262185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "199"
-            endingLineNumber = "199"
-            landmarkName = "getFilterInfo(rankBy:radius:openNow:)"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "tracingLocationDidFailWithError(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,13 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnotherGetGoing/ViewControllers/SearchViewController.swift"
-            timestampString = "552855506.008057"
+            timestampString = "552857652.262289"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "200"
-            endingLineNumber = "200"
-            landmarkName = "getFilterInfo(rankBy:radius:openNow:)"
-            landmarkType = "7">
+            startingLineNumber = "207"
+            endingLineNumber = "207"
+            landmarkName = "SearchViewController"
+            landmarkType = "21">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnotherGetGoing/Services/GooglePlacesAPI.swift"
-            timestampString = "552856308.63878"
+            timestampString = "552857652.2623709"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "102"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnotherGetGoing/Services/GooglePlacesAPI.swift"
-            timestampString = "552856308.639327"
+            timestampString = "552857652.26245"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
@@ -106,7 +106,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "AnotherGetGoing/Services/GooglePlacesAPI.swift"
-            timestampString = "552856308.639694"
+            timestampString = "552857652.2625231"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "35"

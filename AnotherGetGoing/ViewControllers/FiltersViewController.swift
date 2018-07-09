@@ -21,6 +21,8 @@ enum RankBy {
 }
 protocol FilterDelegate {
     func getFilterInfo(rankBy: RankBy,radius: String, openNow: Bool)
+    func applySelectedFilters()
+    func resetSelectedFilters()
 }
 class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
  
@@ -67,8 +69,10 @@ class FiltersViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         dismiss(animated: true, completion: nil)
     }
     
+    
     @IBAction func applyButtonAction(_ sender: Any) {
         delegate?.getFilterInfo(rankBy: rankSelected, radius: radius, openNow: isOpen)
+        delegate?.applySelectedFilters()
         dismiss(animated: true, completion: nil)
     }
     @IBAction func openNowSelectionChange(_ sender: UISwitch) {

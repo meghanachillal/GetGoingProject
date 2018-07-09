@@ -87,6 +87,7 @@
                     <navigationItem key="navigationItem" id="hcp-xc-x35"/>
                     <connections>
                         <outlet property="activityIndicator" destination="QGg-an-7XK" id="o4Z-mp-1da"/>
+                        <outlet property="filterOptions" destination="zyp-B7-kE0" id="J4A-oA-aNK"/>
                         <outlet property="searchParameterTextField" destination="uLj-6q-Mcv" id="I8s-aa-egM"/>
                         <outlet property="segmentedControl" destination="2o4-zt-xfz" id="Zg0-99-sUN"/>
                     </connections>

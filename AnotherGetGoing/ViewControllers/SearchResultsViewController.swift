@@ -56,6 +56,8 @@ class SearchResultsViewController: UIViewController, UITableViewDelegate, UITabl
         else{
             cell.ratingControl.isHidden = true
         }
+        
+        print("Size of JSON: \(places.count)")
     
         return cell
     }

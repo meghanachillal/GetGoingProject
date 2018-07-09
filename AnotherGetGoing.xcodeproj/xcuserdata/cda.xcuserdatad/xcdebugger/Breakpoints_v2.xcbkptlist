@@ -2,4 +2,150 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnotherGetGoing/ViewControllers/SearchViewController.swift"
+            timestampString = "552855506.007979"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
+            landmarkName = "getFilterInfo(rankBy:radius:openNow:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnotherGetGoing/ViewControllers/SearchViewController.swift"
+            timestampString = "552855506.008057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
+            landmarkName = "getFilterInfo(rankBy:radius:openNow:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnotherGetGoing/Services/GooglePlacesAPI.swift"
+            timestampString = "552856308.63878"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "nearbySearch(for:radius:openNow:rankBy:keyword:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnotherGetGoing/Services/GooglePlacesAPI.swift"
+            timestampString = "552856308.639327"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "nearbySearch(for:radius:openNow:rankBy:keyword:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static AnotherGetGoing.GooglePlacesAPI.nearbySearch(for: __C.CLLocationCoordinate2D, radius: Swift.Int, openNow: Swift.Optional&lt;Swift.Bool&gt;, rankBy: Swift.Optional&lt;Swift.String&gt;, keyword: Swift.Optional&lt;Swift.String&gt;, completionHandler: (Swift.Int, Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AnotherGetGoing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cda/Desktop/GetGoingProject/AnotherGetGoing/Services/GooglePlacesAPI.swift"
+                  timestampString = "552841070.898119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "3851">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in static AnotherGetGoing.GooglePlacesAPI.nearbySearch(for: __C.CLLocationCoordinate2D, radius: Swift.Int, openNow: Swift.Optional&lt;Swift.Bool&gt;, rankBy: Swift.Optional&lt;Swift.String&gt;, keyword: Swift.Optional&lt;Swift.String&gt;, completionHandler: (Swift.Int, Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AnotherGetGoing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cda/Desktop/GetGoingProject/AnotherGetGoing/Services/GooglePlacesAPI.swift"
+                  timestampString = "552841070.900671"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AnotherGetGoing/Services/GooglePlacesAPI.swift"
+            timestampString = "552856308.639694"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "textSearch(query:rankBy:distance:openNow:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static AnotherGetGoing.GooglePlacesAPI.textSearch(query: Swift.String, rankBy: Swift.String, distance: Swift.String, openNow: Swift.Bool, completionHandler: (Swift.Int, Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AnotherGetGoing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cda/Desktop/GetGoingProject/AnotherGetGoing/Services/GooglePlacesAPI.swift"
+                  timestampString = "552842569.0521539"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "2191">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Int, Swift.Optional&lt;Foundation.Data&gt;) -&gt; () in static AnotherGetGoing.GooglePlacesAPI.textSearch(query: Swift.String, rankBy: Swift.String, distance: Swift.String, openNow: Swift.Bool, completionHandler: (Swift.Int, Swift.Optional&lt;Swift.Dictionary&lt;Swift.String, Any&gt;&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "AnotherGetGoing"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/cda/Desktop/GetGoingProject/AnotherGetGoing/Services/GooglePlacesAPI.swift"
+                  timestampString = "552842569.066377"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "37">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -15,6 +15,10 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var searchParameterTextField: UITextField!
     
+    var rankSelected: RankBy = .prominence
+    var radius = "25000"
+    var isOpen = false
+    
     var searchParam: String?
     
     //MARK: - View Controller LifeCycle Views
@@ -35,7 +39,8 @@ class SearchViewController: UIViewController {
             if let inputValue = searchParam {
                 activityIndicator.isHidden = false
                 activityIndicator.startAnimating()
-                GooglePlacesAPI.textSearch(query: inputValue, completionHandler: {(status, json) in
+                GooglePlacesAPI.textSearch(query: inputValue,rankBy: rankSelected.description(), distance: radius,openNow: isOpen ,
+                                completionHandler: {(status, json) in
                     if let jsonObj = json {
                         let places = APIParser.parseAPIResponse(json: jsonObj)
                         //update UI on the main thread!
@@ -62,7 +67,7 @@ class SearchViewController: UIViewController {
             }
         case 1:
             if let currentLocation = LocationService.sharedInstance.currentLocation {
-                GooglePlacesAPI.nearbySearch(for: currentLocation.coordinate, keyword: searchParam, completionHandler: {(status, json) in
+                GooglePlacesAPI.nearbySearch(for: currentLocation.coordinate, openNow: isOpen, rankBy: rankSelected.description(), keyword: searchParam, completionHandler: {(status, json) in
                     if let jsonObj = json {
                         let places = APIParser.parseAPIResponse(json: jsonObj)
                         //update UI on the main thread!
@@ -150,7 +155,7 @@ class SearchViewController: UIViewController {
     
     @IBAction func presentFilters(_ sender: UIButton) {
         let filtersViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FiltersViewController") as! FiltersViewController
-        
+        filtersViewController.delegate = self
         present(filtersViewController, animated: true, completion: nil)
     }
     
@@ -188,6 +193,13 @@ extension SearchViewController: LocationServiceDelegate {
     
     func tracingLocationDidFailWithError(_ error: Error) {
         
+    }
+}
+extension SearchViewController: FilterDelegate {
+    func getFilterInfo(rankBy: RankBy, radius: String, openNow: Bool) {
+        rankSelected = rankBy
+        self.radius = radius
+        self.isOpen = openNow
     }
 }
 
